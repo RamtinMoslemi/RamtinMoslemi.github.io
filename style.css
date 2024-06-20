@@ -32,6 +32,18 @@ input[type='submit'].button-outline {
   color: #e913a9;
 }
 
+.collapsible-content {
+    display: none;
+    padding: 0 18px;
+    overflow: hidden;
+}
+
+.collapsible-header {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
 input[type='email'],
 input[type='number'],
 input[type='password'],
@@ -87,12 +99,16 @@ h2 {
     padding-left: 0.5em;
     margin-left: 1.5em;
     margin-top: 1em;
+    padding-right: 0.5em;
+    margin-right: 1.5em;
 }
 
 h3 {
     padding-left: 2em;
+    padding-right: 2em;
     color: rgb(255, 95, 31);
 	margin-left: 2em;
+	margin-right: 2em;
 }
 
 h4 {
@@ -153,7 +169,7 @@ li a:hover {
     background-color: rgb(0, 0, 0);
 }
 
-.active {
+.active header {
     background-color: #bdfa14;
     color : rgb(0, 0, 0)
 }
