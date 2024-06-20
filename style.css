@@ -137,6 +137,9 @@ body {
   font-weight: 300;
   letter-spacing: .01em;
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 span {
@@ -181,7 +184,7 @@ footer {
     padding-left: 10px;
     background-color: rgb(48, 48, 48);
     color: white;
-    margin-top: 100px;
+    margin-top: auto;
 }
 
 footer a {
