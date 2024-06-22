@@ -1,12 +1,33 @@
+/* Colors */
+:root {
+  --background: rgb(41, 40, 43); /* Jaguar */
+  --light-background: rgb(48, 48, 48); /* Night Rider */
+  --text: white;
+
+  --first: rgb(189, 250, 20); /* Electric Lime */
+  --second: rgb(255, 95, 31); /* Pumpkin */
+  --third: orange;
+
+  --first-alt: rgb(196, 30, 58); /* Cardinal */
+  --second-alt: rgb(253, 181, 21); /* Dark Tangerine */
+  --third-alt: rgb(31, 117, 254); /* Dodger Blue */
+
+  --links: rgb(85, 182, 183); /* Puerto Rico */
+  --active-links: rgb(101, 205, 207); /* Downy */
+
+  --buttons: rgb(233, 19, 169); /* Shocking Pink */
+}
+
+
 /* Base styles */
 html {
   box-sizing: border-box;
   font-size: 62.5%; /* 1rem = 10px for easy rem calculations */
-  background-color: #29282b;
+  background-color: var(--background);
 }
 
 body {
-  color: #bdfa14;
+  color: var(--first);
   font-size: 1.8rem; /* 18px */
   font-weight: 300;
   letter-spacing: .01em;
@@ -21,8 +42,8 @@ body {
 button,
 input[type='button'],
 input[type='submit'] {
-  background-color: #e913a9;
-  border: 0.1rem solid #e913a9;
+  background-color: var(--buttons);
+  border: 0.1rem solid var(--buttons);
   border-radius: .4rem;
   color: #fff;
   display: inline-block;
@@ -42,7 +63,7 @@ input[type='button'].button-outline,
 input[type='reset'].button-outline,
 input[type='submit'].button-outline {
   background-color: transparent;
-  color: #e913a9;
+  color: var(--buttons);
 }
 
 /* Collapsible content */
@@ -58,7 +79,7 @@ input[type='submit'].button-outline {
 }
 
 .collapsible-header:hover {
-  color: #65cdcf;
+  color: var(--active-links);
 }
 
 /* Form elements */
@@ -75,14 +96,14 @@ select {
   -moz-appearance: none;
   appearance: none;
   background-color: transparent;
-  border: 0.1rem solid #bdfa14;
+  border: 0.1rem solid var(--first);
   border-radius: .4rem;
   box-shadow: none;
   box-sizing: inherit;
   height: 3.8rem;
   padding: .6rem 1.0rem;
   width: 100%;
-  color: #e913a9;
+  color: var(--buttons);
 }
 
 input[type='email']:focus,
@@ -94,24 +115,24 @@ input[type='text']:focus,
 input[type='url']:focus,
 textarea:focus,
 select:focus {
-  border-color: #e913a9;
+  border-color: var(--buttons);
   outline: 0;
 }
 
 /* Links */
 a {
-  color: #55b6b7;
+  color: var(--links);
 }
 
 a:focus, a:hover {
-  color: #65cdcf;
+  color: var(--active-links);
 }
 
 /* Headers */
 h1 {
   padding: 0;
-  color: #29282b;
-  background-color: #bdfa14;
+  color: var(--background);
+  background-color: var(--first);
   text-align: center;
   font-size: 2.6rem; /* 26px */
 }
@@ -128,7 +149,7 @@ h2 {
 h3 {
   padding-left: 2em;
   padding-right: 2em;
-  color: rgb(255, 95, 31);
+  color: var(--second);
   font-size: 2.2rem; /* 22px */
   margin-left: 2em;
   margin-right: 2em;
@@ -143,7 +164,7 @@ h4 {
   padding-right: 2em;
   margin-right: 4em;
   font-size: 2rem; /* 20px */
-  color: orange;
+  color: var(--third);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -158,9 +179,13 @@ span {
   padding-left: 2em;
   padding-right: 2em;
   text-align: justify;
-  color: white;
+  color: var(--text);
   margin-left: 4em;
   margin-right: 4em;
+}
+
+ul {
+  margin-bottom: 4em;
 }
 
 /* Footer */
@@ -169,8 +194,8 @@ footer {
   font-size: 2.4rem; /* 24px */
   padding: 3px;
   padding-left: 10px;
-  background-color: rgb(48, 48, 48);
-  color: white;
+  background-color: var(--light-background);
+  color: var(--text);
   margin-top: auto;
 }
 
@@ -179,12 +204,12 @@ footer a {
 }
 
 /* Navigation */
-ul {
+.navbar {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: rgb(48, 48, 48);
+  background-color: var(--light-background);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -194,19 +219,28 @@ li {
   float: left;
 }
 
-li a {
+li::marker {
+  color: var(--second);
+}
+
+.navbar li a {
   display: block;
   text-align: center;
   padding: 1px 36px;
   text-decoration: none;
 }
 
-li a:hover {
+.navbar .active {
+  background-color: var(--first);
+  color: var(--light-background);
+}
+
+.navbar li a:hover {
   background-color: rgb(0, 0, 0);
 }
 
 .active header {
-  background-color: #bdfa14;
+  background-color: var(--first);
   color: rgb(0, 0, 0);
 }
 
