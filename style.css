@@ -119,6 +119,12 @@ select:focus {
   outline: 0;
 }
 
+/* Images */
+img {
+    display:inline-block;
+    height: 1em;
+}
+
 /* Links */
 a {
   color: var(--links);
@@ -140,7 +146,7 @@ h1 {
 h2 {
   padding-left: 0.5em;
   margin-left: 1.5em;
-  margin-top: 1em;
+  margin-top: 2em;
   padding-right: 0.5em;
   margin-right: 1.5em;
   font-size: 2.4rem; /* 24px */
@@ -185,7 +191,18 @@ span {
 }
 
 ul {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
+}
+
+.detail {
+  color: var(--third);
+  font-weight: bold;
+}
+
+.detail {
+  color: var(--third);
+  font-weight: bold;
+  pointer-events: none;
 }
 
 /* Footer */
