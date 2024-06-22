@@ -254,11 +254,7 @@ li::marker {
 
 .navbar li a:hover {
   background-color: rgb(0, 0, 0);
-}
-
-.active header {
-  background-color: var(--first);
-  color: rgb(0, 0, 0);
+  color: var(--active-links);
 }
 
 /* Media Queries for Responsive Design */
