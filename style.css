@@ -49,6 +49,15 @@ body {
   margin-bottom: 5;
 }
 
+.courses {
+    display: none;
+}
+
+.courses.active {
+    display: block;
+}
+
+
 /* Content with reduced margins for desktop */
 .content {
   /* padding-left: 1.5em;
@@ -126,13 +135,12 @@ p, ul {
 button,
 input[type='button'],
 input[type='submit'] {
-  background-color: var(--buttons);
+  background-color: var(--light-background);
   border: 0.1rem solid var(--buttons);
   border-radius: 0.5rem;
-  color: #fff;
+  color: var(--text);
   font-size: 2.1rem;
   font-weight: 700;
-  height: 4rem;
   letter-spacing: 0.1rem;
   padding: 0 3rem;
   text-align: center;
@@ -140,11 +148,17 @@ input[type='submit'] {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.button:hover,
-button:hover {
-  background-color: var(--second);
+.button:hover, button:hover, button.active:hover {
+  background-color: rgb(0, 0, 0);
+  color: var(--buttons);
   transform: scale(1.05);
 }
+
+button.active {
+    background-color: var(--buttons);
+    color: var(--text);
+}
+
 
 /* Links */
 a {
@@ -206,6 +220,10 @@ footer a {
   transition: transform 0.3s ease;
 }
 
+footer i:hover {
+    transform: scale(1.05);
+}
+
 /* Navigation */
 .navbar {
   list-style-type: none;
@@ -242,6 +260,24 @@ footer a {
 
 li::marker {
   color: var(--second);
+}
+
+/* Button */
+
+.button-container {
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 1rem;
+    padding: 8px 12px;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.experience-section {
+    display: none;
+    margin-bottom: 20px;
 }
 
 /* Images */
